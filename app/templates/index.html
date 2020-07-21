@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+{% block styles%}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div style="text-align:center; font-size:30px;">
+            <span  style="font-size:200px; font-family: 'Monoton', cursive; text-align:center;" class="text-white">Pitches online</span>
+        </div>
+        <div> 
+        <div class="card jumbotron">
+            <div class="card-body card-warning"  style="text-align: center; ">
+    
+                <p><a href="{{url_for('main.motivation')}}" style="font-size:40px; text-align:center; color: black; font-family: 'Courgette', cursive;">
+                        <br>
+                        Motivation Pitches
+                    </a></p>
+            </div>
+        </div>
+            <br>
+            <div class="card jumbotron">
+                    <div class="card-body"  style="text-align: center">
+                        <p class="card-text">
+            <a href="{{url_for('main.promotion')}}" style="font-size:40px; color: black; font-family: 'Courgette', cursive;">
+                <br>
+                Promotion Pitches
+            </a></p>
+        </div>
+        </div>
+            <br>
+            <div class="card jumbotron">
+                    <div class="card-body" style="text-align: center">
+                        <p class="card-text">
+            <a href="{{url_for('main.product')}}" style="font-size:40px; color: black; font-family: 'Courgette', cursive;">
+                <br>
+                Product Pitches
+            </a></p>
+        </div>
+    </div>
+    <br>
+    </div>
+    </div>
+    </div>
+    {% endblock %}

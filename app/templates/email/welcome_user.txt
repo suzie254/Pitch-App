@@ -1,0 +1,4 @@
+Hello {{user.username}}
+Welcome to  pitching online
+We have just seen you have signed up for our application and would like to welcome you . 
+Please  feel free to add more pitches and comment on pitches posted by other users

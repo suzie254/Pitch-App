@@ -1,0 +1,35 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
+    {% if title %}
+    <title> {{ title }}</title>
+    {% else %}
+    <title> Welcome  to Pitching </title>
+    {% endif %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if massages %}
+            {% for category, message in massages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <!-- Navbar block  --> 
+    {% block navbar %}
+    {% include 'navbar.html' %}
+    {% endblock %}
+
+    
+</head>
+<body class="container-fluid" style="background-image: url('https://images.pexels.com/photos/235986/pexels-photo-235986.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    {% block content %}
+                
+    {% endblock %}
+</body>
+</html>
